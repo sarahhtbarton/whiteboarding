@@ -60,6 +60,17 @@ def is_leap_year(year):
 def days_in_month(date):
     """How many days are there in a month?"""
 
+    month = int(date[:2])
+    year = int(date[3:])
+
+    if is_leap_year(year) is True and month == 2:
+        return 29
+    elif month == 2:
+        return 28
+    elif month in (1, 3, 5, 7, 8, 10, 12):
+        return 31
+    else:
+        return 30
 
 
 if __name__ == '__main__':
