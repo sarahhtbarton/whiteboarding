@@ -1,3 +1,5 @@
+# https://fellowship.hackbrightacademy.com/materials/challenges/concat-lists/index.html
+
 """Given two lists, concatenate the second list at the end of the first.
 
 For example, given ``[1, 2]`` and ``[3, 4]``::
@@ -20,7 +22,10 @@ It should work if either list is empty::
 
 def concat_lists(list1, list2):
     """Combine lists."""
-
+    
+    concatenated = list1 + list2
+    return concatenated
+    
 
 if __name__ == '__main__':
     import doctest
