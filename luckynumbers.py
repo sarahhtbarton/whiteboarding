@@ -25,12 +25,12 @@ import random
 def lucky_numbers(n):
     """Return n unique random numbers from 1-10 (inclusive)."""
 
-    lucky_set = set() #to create an empty set, cant do `= {}` cause that will be an empty dict. Have to do `= set()`
+    lucky_set = set()
 
     while len(lucky_set) < n:
-        lucky_set.add(random.randint(1,10)) #to add to a set, cant do `+=`, have to do `.add()`
+        lucky_set.add(random.randint(1,10))
     
-    lucky_list = list(lucky_set) #to convert a list to a set, use `= list(set_name)`
+    lucky_list = list(lucky_set)
     return lucky_list
 
 if __name__ == '__main__':
