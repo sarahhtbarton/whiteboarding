@@ -26,6 +26,25 @@ def pig_latin(phrase):
         >>> pig_latin('hello awesome programmer')
         'ellohay awesomeyay rogrammerpay'
     """
+    
+    phrase_list = phrase.split()
+    pig_latin_phrase = []
+
+    for word in phrase_list:
+        if word[0] not in ('a', 'e', 'i', 'o', 'u'):
+        new_word = word[1:] + word[0] + 'ay'
+        pig_latin_phrase.append(new_word)
+        
+        else:
+        new_word = word + 'yay'
+        pig_latin_phrase.append(new_word)
+    
+    return(" ".join(pig_latin_phrase))
+
+
+    # Takeaways Lessons:
+    # - Cant use pop with a string -- use string splitting
+    # - join format is " ".join(the_list)
 
 
 if __name__ == '__main__':
