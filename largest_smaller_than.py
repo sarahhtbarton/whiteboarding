@@ -29,6 +29,17 @@ If no such number exists, return None:
 def find_largest_smaller_than(nums, xnumber):
     """Find largest number in sorted list that is smaller than given number."""
 
+    seen = nums[0]
+
+    for n in nums:
+        if n < xnumber and n >= seen:
+            seen = n
+    
+    if seen >= xnumber:
+        return None
+    else:
+        return nums.index(seen)
+
 
 if __name__ == '__main__':
     import doctest
