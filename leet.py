@@ -16,6 +16,19 @@ For example::
 def translate_leet(phrase):
     """Translates input into "leet-speak"."""
 
+    leet_dict = {'a': '@', 'l': '1', 'o': '0', 't': '7', 's': '5', 'e': '3', 'S': '5'}
+    leet_phrase = ''
+
+    for char in phrase:
+        if leet_dict.get(char) is not None:
+            leet_phrase = leet_phrase + leet_dict[char]
+        else:
+            leet_phrase = leet_phrase + char
+    
+    return leet_phrase
+
+
+
 
 if __name__ == '__main__':
     import doctest
