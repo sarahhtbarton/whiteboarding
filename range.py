@@ -25,6 +25,15 @@ largest::
 
 def find_range(nums):
     """Given list of numbers, return smallest & largest number as a tuple."""
+    
+    if len(nums) == 0:
+        return (None, None)
+    else:
+        return (min(nums), max(nums))
+
+    # Notes:
+    # to find max and min, its just max() and min()
+    # to create a tuple, just use ()
 
 
 if __name__ == '__main__':
