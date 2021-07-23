@@ -16,6 +16,14 @@ For example::
 def find_longest_word(words):
     """Return longest word in list of words."""
 
+    longest = words[0]
+
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+    
+    return len(longest)
+
 
 if __name__ == '__main__':
     import doctest
