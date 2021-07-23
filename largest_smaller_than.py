@@ -39,6 +39,9 @@ def find_largest_smaller_than(nums, xnumber):
         return None
     else:
         return nums.index(seen)
+    
+    # Notes:
+    # Can use `list.index(element)` to find the index of an element, if not using enumerate 
 
 
 if __name__ == '__main__':
