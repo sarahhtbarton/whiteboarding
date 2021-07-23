@@ -30,6 +30,23 @@ Uppercase vowels are still vowels:
 def has_more_vowels(word):
     """Does word contain more vowels than non-vowels?"""
 
+    vowels = {'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u'}
+
+    vowel_count = 0
+    const_count = 0
+
+    for char in word:
+        if char in vowels:
+            vowel_count += 1
+        else:
+            const_count += 1
+    
+    return vowel_count > const_count
+
+    # Notes:
+    # Create a set with {}
+
+
 
 if __name__ == '__main__':
     import doctest
