@@ -28,6 +28,14 @@ def is_palindrome(word):
 
     return word == word_reversed
 
+    # Notes:
+    # Another way to solve:
+    # for i in range(len(word)):
+    #     if word[i] != word[len(word) - 1 - i]:
+    #         return False
+    
+    # return True
+
 
 if __name__ == '__main__':
     import doctest
