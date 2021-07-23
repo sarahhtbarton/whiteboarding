@@ -23,6 +23,10 @@ Uppercase and lowercase letters should be considered separately::
 def has_unique_chars(word):
     """Does word contains unique set of characters?"""
 
+    word_set = set(word)
+
+    return len(word) == len(word_set)
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
