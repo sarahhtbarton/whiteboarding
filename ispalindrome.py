@@ -24,6 +24,10 @@ Treat spaces and uppercase letters normally:
 def is_palindrome(word):
     """Return True/False if this word is a palindrome."""
 
+    word_reversed = word[::-1]
+
+    return word == word_reversed
+
 
 if __name__ == '__main__':
     import doctest
