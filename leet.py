@@ -27,7 +27,10 @@ def translate_leet(phrase):
     
     return leet_phrase
 
-
+    # Notes:
+    # Cleaner way to do this:
+    # for char in phrase:
+    #     translated += leet_speak.get(char.lower(), char)
 
 
 if __name__ == '__main__':
