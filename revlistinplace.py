@@ -34,6 +34,12 @@ def rev_list_in_place(lst):
     assignment!
     """
 
+    for i in range(len(lst) // 2):
+        lst[i], lst[len(lst) - 1 - i] = lst[len(lst) - 1 - i], lst[i]
+    
+    return lst
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
