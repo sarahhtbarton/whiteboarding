@@ -40,6 +40,17 @@ This should return a new list, not mutate the original::
 def replace_vowels(chars):
     """Given list of chars, return a new copy, but with vowels replaced by '*'."""
 
+    vowels_set = {'a', 'e', 'i', 'o', 'u'}
+    replaced_list = []
+
+    for char in chars:
+        if char.lower() in vowels_set:
+            replaced_list.append('*')
+        else:
+            replaced_list.append(char)
+    
+    return replaced_list
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
