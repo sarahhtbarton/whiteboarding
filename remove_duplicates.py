@@ -18,6 +18,14 @@ For example::
 
 def remove_duplicates(items):
     """Remove duplicates in the list items and return that list."""
+
+    deduped_list = []
+
+    for num in items:
+        if num not in deduped_list:
+            deduped_list.append(num)
+    
+    return deduped_list
     
 if __name__ == '__main__':
     import doctest
