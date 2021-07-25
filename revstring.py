@@ -22,6 +22,8 @@ def rev_string(astring):
     You may NOT use the reversed() function!
     """
 
+    return astring[::-1]
+
 
 if __name__ == '__main__':
     import doctest
