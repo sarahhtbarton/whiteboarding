@@ -39,6 +39,10 @@ def rev_list_in_place(lst):
     
     return lst
 
+    # Notes:
+    # Can also use the below for negative indexing
+    # lst[i], lst[-i - 1] = lst[-i - 1], lst[i]
+
 
 if __name__ == '__main__':
     import doctest
