@@ -24,6 +24,10 @@ def is_pangram(sentence):
     
     return alphabet_set == sentence_set
 
+    # Notes:
+    # create an empty set with `set()` not `set{}`
+    # sets are unordered, so two sets can equal each other even if not in same order
+
 
 if __name__ == "__main__":
     import doctest
