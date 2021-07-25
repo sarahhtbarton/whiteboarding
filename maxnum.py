@@ -1,4 +1,4 @@
-https://fellowship.hackbrightacademy.com/materials/challenges/max-num/index.html?
+# https://fellowship.hackbrightacademy.com/materials/challenges/max-num/index.html?
 
 """Return the largest integer in a list.
 
@@ -26,6 +26,14 @@ For example::
 
 def max_num(num_list):
     """Returns largest integer from given list"""
+
+    max_num = num_list[0]
+
+    for num in num_list:
+        if num > max_num:
+            max_num = num
+    
+    return max_num
 
 
 if __name__ == '__main__':
