@@ -41,6 +41,17 @@ split the string on whitespace::
 def word_lengths(sentence):
     """Get dictionary of word-length: {words}."""
 
+    word_length_dict = {}
+    
+    for word in sentence.split():
+        word_length_dict[len(word)] = word_length_dict.get(len(word), set())
+        word_length_dict[len(word)].add(word)
+    
+    return word_length_dict
+
+    # Notes:
+    # For sets, use `.add()` and `.remove()` NOT `.append()`
+
 
 if __name__ == '__main__':
     import doctest
