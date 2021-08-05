@@ -20,6 +20,14 @@ numbers:
 def truncate(string):
     """Truncate repeating characters in a string."""
 
+    truncated_string = string[0]
+    
+    for i in range(1, len(string)):
+        if string[i] != string[i-1]:
+            truncated_string += string[i]
+
+    return truncated_string
+
 
 if __name__ == '__main__':
     import doctest
