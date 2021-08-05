@@ -1,3 +1,5 @@
+# https://fellowship.hackbrightacademy.com/materials/challenges/sum-list/index.html
+
 """Sum a list of integers.
 
 Given a list of numbers, return the sum. Do not use the built in 'sum' method.
@@ -23,6 +25,13 @@ The sum of an empty list is zero::
 
 def sum_list(num_list):
     """Return the sum of all numbers in list."""
+
+    sum_list = 0
+
+    for num in num_list:
+        sum_list += num
+    
+    return sum_list
 
 
 if __name__ == '__main__':
