@@ -13,11 +13,7 @@ For example::
 def snake_to_camel(variable_name):
     """Given a variable name in snake_case, return camelCase of name."""
 
-    underscore_index = 0
-
-    for i in range(len(variable_name)):
-        if variable_name[i] == '_':
-            underscore_index = i
+    underscore_index = variable_name.index("_")
     
     camel_case = variable_name[:underscore_index]
     camel_case += variable_name[underscore_index+1:].title()
