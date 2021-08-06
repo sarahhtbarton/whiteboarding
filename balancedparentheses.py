@@ -32,6 +32,20 @@ If you receive a string with no parentheses, consider it balanced::
 def has_balanced_parens(phrase):
     """Does a string have balanced parentheses?"""
 
+    balanced = Stack()
+
+    for char in phrase:
+        if char == '(':
+            balanced.push()
+        elif char == ')':
+            if balanced.is_empty():
+                return False
+            else:
+                balanced.pop()
+    
+    return balanced.is_empty()
+
+
 
 if __name__ == '__main__':
     import doctest
